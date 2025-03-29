@@ -119,7 +119,7 @@ public class Direct2DRenderEngine : IRenderEngine
                 var collection = new GradientStopCollection(
                     RenderTarget,
                     [
-                        new GradientStop { Position = 0, Color = new RawColor4(0, 0, 0, 0) },
+                        new GradientStop { Position = 0, Color = ToD2DColor(jsonColor, a: 0) },
                         new GradientStop { Position = 1, Color = ToD2DColor(jsonColor) }
                     ],
                     Gamma.StandardRgb
@@ -451,9 +451,20 @@ public class Direct2DRenderEngine : IRenderEngine
         RenderTarget.Transform = rawMatrix;
     }
 
-    private static RawColor4 ToD2DColor(JsonColor jsonColor)
+    private static RawColor4 ToD2DColor(
+        JsonColor jsonColor,
+        float? r = null,
+        float? g = null,
+        float? b = null,
+        float? a = null
+    )
     {
-        return new RawColor4(jsonColor.R / 255.0F, jsonColor.G / 255.0F, jsonColor.B / 255.0F, jsonColor.A / 255.0F);
+        return new RawColor4(
+            r ?? jsonColor.R / 255.0F,
+            g ?? jsonColor.G / 255.0F,
+            b ?? jsonColor.B / 255.0F,
+            a ?? jsonColor.A / 255.0F
+        );
     }
 
     private static Matrix3x2 ToMatrix(RawMatrix3x2 rawMatrix)
