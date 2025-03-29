@@ -69,7 +69,7 @@
   ],
   "Templates": {
     "TextFont": {
-      "Font": "Microsoft YaHei",
+      "FontName": "Microsoft YaHei",
       "Bold": true,
       "Italic": false
     },
