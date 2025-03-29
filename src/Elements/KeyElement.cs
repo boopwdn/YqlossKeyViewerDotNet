@@ -50,7 +50,7 @@ public class KeyElement : IElement
             { "counter", keyViewer.KeyCounter.GetCounter(keyInfo.Code) },
             {
                 "kps",
-                keyData.Rains
+                keyData.RainsForRender
                     .Select(it => it.From)
                     .Let(it => keyData.Pressed ? it.Append(keyData.PressTime) : it)
                     .Count(it => TimeUtil.TickToNano(time - it) < 1e9)
