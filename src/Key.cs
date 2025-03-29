@@ -41,6 +41,9 @@ public class KeyManager(KeyViewer keyViewer, List<KeyInfo> keysInfo)
 
             foreach (var keyInfo in KeysInfo)
             {
+                if (!keyViewer.Config.HookKeyboardUpdateAllKeys && keyToUpdate.HasValue && keyInfo.Code != keyToUpdate)
+                    continue;
+                
                 var pressed = keyInfo.Code == keyToUpdate
                     ? updateAsPressed
                     : (User32.GetAsyncKeyState(keyInfo.Code) & 0x8000) != 0;

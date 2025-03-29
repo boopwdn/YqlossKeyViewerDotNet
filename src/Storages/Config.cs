@@ -8,6 +8,7 @@ public class Config
     public double FrameRate { get; set; } = 60;
     public double PollRate { get; set; } = 60;
     public bool HookKeyboard { get; set; } = false;
+    public bool HookKeyboardUpdateAllKeys { get; set; } = true;
     public bool HookMouse { get; set; } = false;
     public bool PollKeys { get; set; } = true;
     public string CounterPath { get; set; } = "Global";
