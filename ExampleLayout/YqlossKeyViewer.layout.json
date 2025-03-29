@@ -1,0 +1,497 @@
+{
+  "Width": 360,
+  "Height": 350,
+  "Keys": [
+    {
+      "Code": 81,
+      "Name": "Q"
+    },
+    {
+      "Code": 87,
+      "Name": "W"
+    },
+    {
+      "Code": 69,
+      "Name": "E"
+    },
+    {
+      "Code": 82,
+      "Name": "R"
+    },
+    {
+      "Code": 85,
+      "Name": "U"
+    },
+    {
+      "Code": 73,
+      "Name": "I"
+    },
+    {
+      "Code": 79,
+      "Name": "O"
+    },
+    {
+      "Code": 80,
+      "Name": "P"
+    },
+    {
+      "Code": 65,
+      "Name": "A"
+    },
+    {
+      "Code": 83,
+      "Name": "S"
+    },
+    {
+      "Code": 68,
+      "Name": "D"
+    },
+    {
+      "Code": 70,
+      "Name": "F"
+    },
+    {
+      "Code": 72,
+      "Name": "H"
+    },
+    {
+      "Code": 74,
+      "Name": "J"
+    },
+    {
+      "Code": 75,
+      "Name": "K"
+    },
+    {
+      "Code": 76,
+      "Name": "L"
+    }
+  ],
+  "Templates": {
+    "TextFont": {
+      "Font": "Microsoft YaHei",
+      "Bold": true,
+      "Italic": false
+    },
+    "TextStyle": {
+      "Template": "TextFont",
+      "FontSize": 24,
+      "AnchorX": 0.5,
+      "AnchorY": 0.5,
+      "Shadow": true,
+      "ShadowX": 4,
+      "ShadowY": 4,
+      "ShadowColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0,
+        "A": 128
+      }
+    },
+    "DefaultKeyName": {
+      "Template": "TextStyle",
+      "Text": "<name>",
+      "X": 4,
+      "Y": 2,
+      "Width": -8,
+      "Height": -18
+    },
+    "DefaultKeyCounter": {
+      "Template": "TextStyle",
+      "Text": "<counter>",
+      "X": 4,
+      "Y": 20,
+      "Width": -8,
+      "Height": -24
+    },
+    "GlobalInfoLeftText": {
+      "Template": "TextStyle",
+      "AnchorX": 0.0,
+      "AnchorY": 0.5,
+      "X": 6,
+      "Y": 3,
+      "Width": -12,
+      "Height": -8,
+      "Color": {
+        "R": 255,
+        "G": 255,
+        "B": 255,
+        "A": 255
+      }
+    },
+    "GlobalInfoRightText": {
+      "Template": "TextStyle",
+      "AnchorX": 1.0,
+      "AnchorY": 0.5,
+      "X": 6,
+      "Y": 3,
+      "Width": -12,
+      "Height": -8,
+      "Color": {
+        "R": 255,
+        "G": 255,
+        "B": 255,
+        "A": 255
+      }
+    },
+    "DefaultKey": {
+      "Type": "Key",
+      "Width": 38,
+      "Height": 38,
+      "BorderWidth": 2,
+      "BorderHeight": 2,
+      "BorderRadius": 6,
+      "InnerRadius": 4,
+      "Released": {
+        "BorderColor": {
+          "R": 245,
+          "G": 171,
+          "B": 185,
+          "A": 255
+        },
+        "InnerColor": {
+          "R": 245,
+          "G": 171,
+          "B": 185,
+          "A": 51
+        },
+        "Texts": [
+          {
+            "Template": "DefaultKeyName",
+            "Color": {
+              "R": 255,
+              "G": 255,
+              "B": 255,
+              "A": 255
+            }
+          },
+          {
+            "Template": "DefaultKeyCounter",
+            "Color": {
+              "R": 255,
+              "G": 255,
+              "B": 255,
+              "A": 255
+            }
+          }
+        ]
+      },
+      "Pressed": {
+        "BorderColor": {
+          "R": 255,
+          "G": 255,
+          "B": 255,
+          "A": 255
+        },
+        "InnerColor": {
+          "R": 255,
+          "G": 255,
+          "B": 255,
+          "A": 255
+        },
+        "Texts": [
+          {
+            "Template": "DefaultKeyName",
+            "Color": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 255
+            }
+          },
+          {
+            "Template": "DefaultKeyCounter",
+            "Color": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 255
+            }
+          }
+        ]
+      }
+    },
+    "GlobalInfo": {
+      "Type": "Key",
+      "KeyIndex": -721,
+      "Width": 158,
+      "Height": 28,
+      "BorderWidth": 2,
+      "BorderHeight": 2,
+      "BorderRadius": 6,
+      "InnerRadius": 4,
+      "Released": {
+        "BorderColor": {
+          "R": 245,
+          "G": 171,
+          "B": 185,
+          "A": 255
+        },
+        "InnerColor": {
+          "R": 245,
+          "G": 171,
+          "B": 185,
+          "A": 51
+        }
+      }
+    },
+    "RainFadeOut": {
+      "FadeOut": true,
+      "FadeStartX": 0,
+      "FadeStartY": 0,
+      "FadeEndX": 0,
+      "FadeEndY": 40
+    },
+    "PrimaryRain": {
+      "Template": "RainFadeOut",
+      "Type": "Rain",
+      "Width": 38,
+      "Height": 240,
+      "Y": 0,
+      "InnerColor": {
+        "R": 91,
+        "G": 207,
+        "B": 250,
+        "A": 255
+      }
+    },
+    "SecondaryRain": {
+      "Template": "PrimaryRain",
+      "Width": 30,
+      "InnerColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255,
+        "A": 255
+      }
+    },
+    "GlobalRain": {
+      "Template": "RainFadeOut",
+      "Type": "Rain",
+      "Width": 38,
+      "Height": 240,
+      "Y": 0,
+      "DFromTime": -1000000,
+      "DTillTime": 1000000,
+      "InnerColor": {
+        "R": 245,
+        "G": 171,
+        "B": 185,
+        "A": 255
+      }
+    }
+  },
+  "Elements": [
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 0,
+      "X": 1,
+      "Y": 241
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 1,
+      "X": 41,
+      "Y": 241
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 2,
+      "X": 81,
+      "Y": 241
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 3,
+      "X": 121,
+      "Y": 241
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 4,
+      "X": 161,
+      "Y": 241
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 5,
+      "X": 201,
+      "Y": 241
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 6,
+      "X": 241,
+      "Y": 241
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 7,
+      "X": 281,
+      "Y": 241
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 8,
+      "X": 1,
+      "Y": 281
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 9,
+      "X": 41,
+      "Y": 281
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 10,
+      "X": 81,
+      "Y": 281
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 11,
+      "X": 121,
+      "Y": 281
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 12,
+      "X": 161,
+      "Y": 281
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 13,
+      "X": 201,
+      "Y": 281
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 14,
+      "X": 241,
+      "Y": 281
+    },
+    {
+      "Template": "DefaultKey",
+      "KeyIndex": 15,
+      "X": 281,
+      "Y": 281
+    },
+    {
+      "Template": "GlobalInfo",
+      "X": 1,
+      "Y": 321,
+      "Texts": [
+        {
+          "Template": "GlobalInfoLeftText",
+          "Text": "KPS"
+        },
+        {
+          "Template": "GlobalInfoRightText",
+          "Text": "<kps>"
+        }
+      ]
+    },
+    {
+      "Template": "GlobalInfo",
+      "X": 161,
+      "Y": 321,
+      "Texts": [
+        {
+          "Template": "GlobalInfoLeftText",
+          "Text": "Total"
+        },
+        {
+          "Template": "GlobalInfoRightText",
+          "Text": "<counter>"
+        }
+      ]
+    },
+    {
+      "Template": "PrimaryRain",
+      "KeyIndex": 0,
+      "X": 1
+    },
+    {
+      "Template": "PrimaryRain",
+      "KeyIndex": 1,
+      "X": 41
+    },
+    {
+      "Template": "PrimaryRain",
+      "KeyIndex": 2,
+      "X": 81
+    },
+    {
+      "Template": "PrimaryRain",
+      "KeyIndex": 3,
+      "X": 121
+    },
+    {
+      "Template": "PrimaryRain",
+      "KeyIndex": 4,
+      "X": 161
+    },
+    {
+      "Template": "PrimaryRain",
+      "KeyIndex": 5,
+      "X": 201
+    },
+    {
+      "Template": "PrimaryRain",
+      "KeyIndex": 6,
+      "X": 241
+    },
+    {
+      "Template": "PrimaryRain",
+      "KeyIndex": 7,
+      "X": 281
+    },
+    {
+      "Template": "SecondaryRain",
+      "KeyIndex": 8,
+      "X": 5
+    },
+    {
+      "Template": "SecondaryRain",
+      "KeyIndex": 9,
+      "X": 45
+    },
+    {
+      "Template": "SecondaryRain",
+      "KeyIndex": 10,
+      "X": 85
+    },
+    {
+      "Template": "SecondaryRain",
+      "KeyIndex": 11,
+      "X": 125
+    },
+    {
+      "Template": "SecondaryRain",
+      "KeyIndex": 12,
+      "X": 165
+    },
+    {
+      "Template": "SecondaryRain",
+      "KeyIndex": 13,
+      "X": 205
+    },
+    {
+      "Template": "SecondaryRain",
+      "KeyIndex": 14,
+      "X": 245
+    },
+    {
+      "Template": "SecondaryRain",
+      "KeyIndex": 15,
+      "X": 285
+    },
+    {
+      "Template": "GlobalRain",
+      "KeyIndex": -721,
+      "X": 321
+    }
+  ]
+}
