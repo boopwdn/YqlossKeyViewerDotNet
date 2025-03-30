@@ -5,45 +5,41 @@ namespace YqlossKeyViewerDotNet.Elements;
 
 public class KeyElement : IElement
 {
-    public class StateUniqueData
-    {
-        public JsonColor BorderColor { get; set; } = default;
-        public JsonColor InnerColor { get; set; }
-        public List<TextElement> Texts { get; set; } = [];
-    }
-
     public int KeyIndex { get; set; }
     public double X { get; set; }
     public double Y { get; set; }
     public double Width { get; set; }
     public double Height { get; set; }
-    public double BorderWidth { get; set; } = 0;
-    public double BorderHeight { get; set; } = 0;
-    public double BorderRadius { get; set; } = 0;
-    public double InnerRadius { get; set; } = 0;
-    public StateUniqueData Released { get; set; } = SuppressUtil.LateInit<StateUniqueData>();
-    public StateUniqueData Pressed { get; set; } = SuppressUtil.LateInit<StateUniqueData>();
+    public RectElement ReleasedRect { get; set; } = SuppressUtil.LateInit<RectElement>();
+    public RectElement PressedRect { get; set; } = SuppressUtil.LateInit<RectElement>();
     public List<TextElement> Texts { get; set; } = [];
+    public List<TextElement> ReleasedTexts { get; set; } = [];
+    public List<TextElement> PressedTexts { get; set; } = [];
 
     public void Draw(KeyViewer keyViewer)
     {
         var time = TimeUtil.TickTime();
-        var scale = keyViewer.Config.Scale;
         var keyInfo = keyViewer.KeyManager.GetKeyInfo(KeyIndex);
         var keyData = keyViewer.KeyManager.GetKeyData(KeyIndex);
-        var stateData = keyData.Pressed ? Pressed : Released;
-        keyViewer.RenderEngine.DrawBorderedRect(
-            X * scale,
-            Y * scale,
-            Width * scale,
-            Height * scale,
-            BorderWidth * scale,
-            BorderHeight * scale,
-            BorderRadius * scale,
-            InnerRadius * scale,
-            stateData.BorderColor,
-            stateData.InnerColor
-        );
+        var rect = keyData.Pressed ? PressedRect : ReleasedRect;
+        var texts = keyData.Pressed ? PressedTexts : ReleasedTexts;
+
+        {
+            var originalX = rect.X;
+            var originalY = rect.Y;
+            var originalWidth = rect.Width;
+            var originalHeight = rect.Height;
+            rect.X += X;
+            rect.Y += Y;
+            rect.Width += Width;
+            rect.Height += Height;
+            rect.Draw(keyViewer);
+            rect.X = originalX;
+            rect.Y = originalY;
+            rect.Width = originalWidth;
+            rect.Height = originalHeight;
+        }
+        
         var placeholders = new Dictionary<string, object>
         {
             { "name", keyInfo.Name },
@@ -56,7 +52,8 @@ public class KeyElement : IElement
                     .Count(it => TimeUtil.TickToNano(time - it) < 1e9)
             }
         };
-        foreach (var text in Texts.Concat(stateData.Texts))
+
+        foreach (var text in Texts.Concat(texts))
         {
             var originalX = text.X;
             var originalY = text.Y;

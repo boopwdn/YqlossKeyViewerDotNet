@@ -91,27 +91,27 @@
     "DefaultKeyName": {
       "Template": "TextStyle",
       "Text": "<name>",
-      "X": 4,
-      "Y": 2,
-      "Width": -8,
-      "Height": -18
+      "X": 5,
+      "Y": 3,
+      "Width": -10,
+      "Height": -20
     },
     "DefaultKeyCounter": {
       "Template": "TextStyle",
       "Text": "<counter>",
-      "X": 4,
-      "Y": 20,
-      "Width": -8,
-      "Height": -24
+      "X": 5,
+      "Y": 21,
+      "Width": -10,
+      "Height": -26
     },
     "GlobalInfoLeftText": {
       "Template": "TextStyle",
       "AnchorX": 0.0,
       "AnchorY": 0.5,
-      "X": 6,
-      "Y": 3,
-      "Width": -12,
-      "Height": -8,
+      "X": 7,
+      "Y": 4,
+      "Width": -14,
+      "Height": -10,
       "Color": {
         "R": 255,
         "G": 255,
@@ -123,10 +123,10 @@
       "Template": "TextStyle",
       "AnchorX": 1.0,
       "AnchorY": 0.5,
-      "X": 6,
-      "Y": 3,
-      "Width": -12,
-      "Height": -8,
+      "X": 7,
+      "Y": 4,
+      "Width": -14,
+      "Height": -10,
       "Color": {
         "R": 255,
         "G": 255,
@@ -134,15 +134,22 @@
         "A": 255
       }
     },
-    "DefaultKey": {
-      "Type": "Key",
-      "Width": 38,
-      "Height": 38,
+    "KeyRect": {
+      "X": 1,
+      "Y": 1,
+      "Width": -2,
+      "Height": -2,
       "BorderWidth": 2,
       "BorderHeight": 2,
       "BorderRadius": 6,
-      "InnerRadius": 4,
-      "Released": {
+      "InnerRadius": 4
+    },
+    "DefaultKey": {
+      "Type": "Key",
+      "Width": 40,
+      "Height": 40,
+      "ReleasedRect": {
+        "Template": "KeyRect",
         "BorderColor": {
           "R": 245,
           "G": 171,
@@ -154,29 +161,30 @@
           "G": 171,
           "B": 185,
           "A": 51
-        },
-        "Texts": [
-          {
-            "Template": "DefaultKeyName",
-            "Color": {
-              "R": 255,
-              "G": 255,
-              "B": 255,
-              "A": 255
-            }
-          },
-          {
-            "Template": "DefaultKeyCounter",
-            "Color": {
-              "R": 255,
-              "G": 255,
-              "B": 255,
-              "A": 255
-            }
-          }
-        ]
+        }
       },
-      "Pressed": {
+      "ReleasedTexts": [
+        {
+          "Template": "DefaultKeyName",
+          "Color": {
+            "R": 255,
+            "G": 255,
+            "B": 255,
+            "A": 255
+          }
+        },
+        {
+          "Template": "DefaultKeyCounter",
+          "Color": {
+            "R": 255,
+            "G": 255,
+            "B": 255,
+            "A": 255
+          }
+        }
+      ],
+      "PressedRect": {
+        "Template": "KeyRect",
         "BorderColor": {
           "R": 255,
           "G": 255,
@@ -188,39 +196,36 @@
           "G": 255,
           "B": 255,
           "A": 255
-        },
-        "Texts": [
-          {
-            "Template": "DefaultKeyName",
-            "Color": {
-              "R": 0,
-              "G": 0,
-              "B": 0,
-              "A": 255
-            }
-          },
-          {
-            "Template": "DefaultKeyCounter",
-            "Color": {
-              "R": 0,
-              "G": 0,
-              "B": 0,
-              "A": 255
-            }
+        }
+      },
+      "PressedTexts": [
+        {
+          "Template": "DefaultKeyName",
+          "Color": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 255
           }
-        ]
-      }
+        },
+        {
+          "Template": "DefaultKeyCounter",
+          "Color": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 255
+          }
+        }
+      ]
     },
     "GlobalInfo": {
       "Type": "Key",
       "KeyIndex": -721,
-      "Width": 158,
-      "Height": 28,
-      "BorderWidth": 2,
-      "BorderHeight": 2,
-      "BorderRadius": 6,
-      "InnerRadius": 4,
-      "Released": {
+      "Width": 160,
+      "Height": 30,
+      "ReleasedRect": {
+        "Template": "KeyRect",
         "BorderColor": {
           "R": 245,
           "G": 171,
@@ -285,103 +290,103 @@
     {
       "Template": "DefaultKey",
       "KeyIndex": 0,
-      "X": 1,
-      "Y": 241
+      "X": 0,
+      "Y": 240
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 1,
-      "X": 41,
-      "Y": 241
+      "X": 40,
+      "Y": 240
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 2,
-      "X": 81,
-      "Y": 241
+      "X": 80,
+      "Y": 240
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 3,
-      "X": 121,
-      "Y": 241
+      "X": 120,
+      "Y": 240
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 4,
-      "X": 161,
-      "Y": 241
+      "X": 160,
+      "Y": 240
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 5,
-      "X": 201,
-      "Y": 241
+      "X": 200,
+      "Y": 240
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 6,
-      "X": 241,
-      "Y": 241
+      "X": 240,
+      "Y": 240
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 7,
-      "X": 281,
-      "Y": 241
+      "X": 280,
+      "Y": 240
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 8,
-      "X": 1,
-      "Y": 281
+      "X": 0,
+      "Y": 280
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 9,
-      "X": 41,
-      "Y": 281
+      "X": 40,
+      "Y": 280
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 10,
-      "X": 81,
-      "Y": 281
+      "X": 80,
+      "Y": 280
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 11,
-      "X": 121,
-      "Y": 281
+      "X": 120,
+      "Y": 280
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 12,
-      "X": 161,
-      "Y": 281
+      "X": 160,
+      "Y": 280
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 13,
-      "X": 201,
-      "Y": 281
+      "X": 200,
+      "Y": 280
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 14,
-      "X": 241,
-      "Y": 281
+      "X": 240,
+      "Y": 280
     },
     {
       "Template": "DefaultKey",
       "KeyIndex": 15,
-      "X": 281,
-      "Y": 281
+      "X": 280,
+      "Y": 280
     },
     {
       "Template": "GlobalInfo",
-      "X": 1,
-      "Y": 321,
+      "X": 0,
+      "Y": 320,
       "Texts": [
         {
           "Template": "GlobalInfoLeftText",
@@ -395,8 +400,8 @@
     },
     {
       "Template": "GlobalInfo",
-      "X": 161,
-      "Y": 321,
+      "X": 160,
+      "Y": 320,
       "Texts": [
         {
           "Template": "GlobalInfoLeftText",
